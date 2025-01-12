@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ann-Marie LMFT Private Practice</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="scripts.js" defer></script>
+</head>
+<body>
+    <header>
+        <h1 id="locations">Los Angeles | Glendora , CA</h1>
+        <h1>Ann-Marie Murphy, LMFT</h1>
+        <p>Licensed Marriage Family Therapist (#46823)</p>
+        <p>Crisis Therapist</p>
+        <p>Certified Clinical Trauma Professional (CCTP)</p>
+        <nav>
+            <ul>
+                <li><a href="#about">About</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><a href="#billing">Billing</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="verification">
+        <a href="https://www.psychologytoday.com/us/therapists/ann-marie-murphy-glendora-ca/1125508" target="_blank">
+            <img src="imgs/verified2.png" alt="verified" class="verified-image">
+        </a>
+    </div>
+    
+    <main id="main-container">
+        <section id="ann-marie">
+            <img src="imgs/ann-marie1.jpeg" alt="Ann-Marie" class="about-image">
+            <blockquote class="quote">
+                "People may forget what you said, but they will never forget how you made them feel" 
+                <br>- Maya Angelou
+            </blockquote>
+        </section>
+        
+        
+        <section id="about-container">
+            <article id="about">
+                <h2>What brings you here?</h2>
+                <p>Are you feeling stuck, overwhelmed, or uncertain about the next step in your life? Have you suffered a tragedy and don't know what to do? Do you find yourself longing for a safe, understanding space where you can share your thoughts without fear of judgment? Whether you’re navigating a difficult relationship, managing stress or anxiety, or simply seeking clarity and balance, you deserve support that’s focused entirely on you. Here, you’ll find a welcoming environment where your experiences are honored, your feelings are validated, and your growth is the priority. Together, we’ll explore your challenges, uncover your strengths, and work toward the life you envision. If you’re ready to take this step, I’m here to walk with you, every step of the way.</p>
+            </article>
+        </section>
+        
+        <section id="services">
+            <h2>Services</h2>
+            <h2>(In-person and online)</h2>
+            <div class="service">
+                <img src="imgs/individual1.jpg" alt="Individual Therapy" class="service-image">
+                <h4>Individual Therapy</h4>
+                <p class="service-description">Individual therapy offers a personalized space for self-discovery, healing, and growth. Whether you’re facing anxiety, depression, life transitions, or self-esteem challenges, this one-on-one approach provides the tools and insights you need to navigate life’s obstacles. Together, we’ll work to uncover patterns, explore emotions, and develop strategies to help you move toward a more fulfilling and balanced life.</p>
+            </div>
+            <div class="service">
+                <img src="imgs/couple1.jpg" alt="Couples Therapy" class="service-image">
+                <h4>Couples Therapy</h4>
+                <p class="service-description">Couples therapy is a collaborative space to strengthen your connection, resolve conflicts, and foster healthier communication. Whether you’re dealing with infidelity, recurring arguments, or simply feeling disconnected, this process focuses on rebuilding trust and understanding. By addressing the unique dynamics of your relationship, we’ll work together to create a stronger, more harmonious bond.</p>
+            </div>
+            <div class="service">
+                <img src="imgs/family2.jpg" alt="Family Therapy" class="service-image">
+                <h4>Family Therapy</h4>
+                <p class="service-description">Family therapy is designed to help families navigate challenges, improve communication, and build healthier relationships. Whether it’s navigating life changes, managing conflicts, or addressing specific issues, this process focuses on the family as a unit. Together, we’ll create a supportive environment where each member feels heard and valued, fostering greater understanding and connection.</p>
+            </div>
+        </section>
+        
+        <section id="contact">
+            <h1>Now accepting Telehealth clients!</h1>
+            <p>If you have any questions or would like to schedule an appointment, please feel free to contact me at:</p>
+            <p>Email: <a href="mailto:therapistamm@gmail.com">therapistamm@gmail.com</a></p>
+            <p>Phone: (626) 605-1835</p>
+        </section>
+        
+        <section id="billing">
+            <h2 style="text-align: center;">Billing</h2>
+            <ul>
+                <li><strong>Initial assessment: $200</strong></li>
+                <li><strong>Individual Psychotherapy: $175 per session or $560 for 4 sessions</strong></li>
+                <li><strong>Couples/Family Psychotherapy: $185 per session</strong></li>
+                <li><strong><a href="mailto:therapistamm@gmail.com">Contact me with questions about insurance or anything else</a></strong></li>
+            </ul>
+        </section>
+
+        <section id="appointment" class="floating-box">
+            <button id="toggle-appointment">Request an Appointment</button>
+            <div id="appointment-form-container" class="hidden">
+                <h3 id="appointment-heading">Ann-Marie Murphy, LMFT Counseling</h3>
+                <form class="appointment-form" action="mailto:therapistamm@gmail.com" method="post" enctype="text/plain">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" required>
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                    <label for="phone">Phone Number (optional):</label>
+                    <input type="tel" id="phone" name="phone">
+                    <label for="message">Message:</label>
+                    <textarea id="message" name="message" rows="4" required></textarea>
+                    <button type="submit">Send</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Ann-Marie Murphy Private Practice. All rights reserved.</p>
+    </footer>
+</body>
+</html>
