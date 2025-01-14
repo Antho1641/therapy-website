@@ -285,33 +285,85 @@ footer {
 }
 
 /* Responsive styles */
+/* General mobile adjustments */
 @media (max-width: 768px) {
-    nav ul li {
-        display: block;
-        margin: 10px 0;
+    body {
+        font-size: 16px; /* Adjust base font size for readability */
     }
 
-    .about-image {
-        max-width: 100%;
-        height: auto;
+    header, footer {
+        padding: var(--spacing-small) 0;
+        text-align: center;
     }
 
-    .quote {
-        padding: 1em;
-    }
-
-    #ann-marie {
-        flex-direction: column;
-        align-items: center;
-    }
-}
-
-@media (max-width: 480px) {
     header h1 {
         font-size: 1.5em;
     }
 
-    .quote {
-        font-size: 0.9em;
+    nav ul li {
+        display: block; /* Stack navigation links */
+        margin: var(--spacing-small) 0;
+    }
+
+    #main-container {
+        flex-direction: column; /* Stack sections vertically */
+        gap: var(--spacing-small);
+    }
+
+    #ann-marie {
+        flex-direction: column;
+        max-width: 100%; /* Use full width */
+    }
+
+    #about-container {
+        margin-left: var(--spacing-small);
+        margin-right: var(--spacing-small);
+    }
+
+    #about,
+    #services,
+    #contact {
+        padding: var(--spacing-small);
+        margin: var(--spacing-small) 0;
+    }
+
+    .about-image,
+    .service-image {
+        max-width: 80%; /* Shrink images to fit */
+    }
+
+    #appointment.floating-box {
+        width: 90%; /* Reduce width for smaller screens */
+        right: var(--spacing-small);
+        top: var(--spacing-small);
+    }
+
+    .appointment-form input,
+    .appointment-form textarea {
+        font-size: 14px; /* Adjust input font size */
+    }
+
+    .appointment-form button {
+        font-size: 14px; /* Adjust button font size */
+    }
+
+    #toggle-appointment {
+        font-size: 14px;
     }
 }
+
+/* Very small devices (e.g., phones) */
+@media (max-width: 480px) {
+    h2, h3, h4 {
+        font-size: 1.2em; /* Adjust heading sizes */
+    }
+
+    .quote {
+        font-size: 1em; /* Shrink quote text */
+    }
+
+    .service {
+        border-width: 0.5em; /* Reduce border thickness */
+    }
+}
+
