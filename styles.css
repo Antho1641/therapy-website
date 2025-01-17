@@ -34,6 +34,12 @@ header h1 {
     font-style: italic;
 }
 
+#locations {
+    margin: 0;
+    font-family: var(--font-secondary);
+    font-style: italic;
+}
+
 header p {
     margin: 0.5em 0;
 }
@@ -159,10 +165,7 @@ a:hover {
     margin-top: var(--spacing-small);
     text-align: center;
     max-width: 400px;
-    font-size: 1.5em; /* Doubled the font size */
-    /* border: 1px solid black;
-    border-radius: 15px;
-    padding: 10px; */
+    font-size: 1.5em; 
 }
 
 #about-container {
@@ -360,10 +363,6 @@ footer {
         font-size: 85%; /* Slightly smaller text for very small screens */
     }
 
-    h1, h2, h3 {
-        font-size: 1.2em; /* Shrink headings */
-    }
-
     nav ul li {
         margin: 5px 0;
     }
@@ -405,15 +404,19 @@ footer {
     }
     #locations {
         padding: 20px;
-        font-size: 0.9em;
+        font-size: 1.3em; 
         text-align: center;
         text-transform: uppercase;
-        top: calc(var(--spacing-medium));
-    }
+        top: calc(var(--spacing-medium) + 10px);
+    } 
     #credentials{
         padding-top: 20px;
-        font-size: 0.9em;
+        font-size: 1.1em;
         text-align: center;
         top: calc(var(--spacing-medium));
+    }
+
+    #main-container {
+        margin-top: calc(var(--spacing-medium) - 10px);
     }
 }
