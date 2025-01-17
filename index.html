@@ -4,19 +4,21 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ann-Marie LMFT Private Practice</title>
-    <link rel="stylesheet" href="https://therapistammurphy.com/styles.css"> 
-    <script src="https://therapistammurphy.com/scripts.js" defer></script> 
+    <link rel="stylesheet" href="https://therapistammurphy.com/styles.css">
+    <!-- <link rel="stylesheet" href="styles.css"> -->
+    <script src="https://therapistammurphy.com/scripts.js" defer></script>
+    <!-- <script src="scripts.js" defer></script> -->
 </head>
 <body>
     <header>
         <div id="title">
-            <h1 id="title">Ann-Marie Murphy, LMFT</h1>
-            <h1 id="locations">Los Angeles | Glendora , CA</h1>
+            <h1>Ann-Marie Murphy, LMFT</h1>
+            <h2 id="locations">Los Angeles | Glendora , CA</h2>
         </div>    
-            <div id="credentials">
-            <p>Licensed Marriage Family Therapist (#46823)</p>
-            <p>Crisis Therapist</p>
-            <p>Certified Clinical Trauma Professional (CCTP)</p>
+        <div id="credentials">
+        <p>Licensed Marriage Family Therapist (#46823)</p>
+        <p>Crisis Therapist</p>
+        <p>Certified Clinical Trauma Professional (CCTP)</p>
         </div>
         <nav>
             <ul>
@@ -35,6 +37,23 @@
     </div>
     
     <main id="main-container">
+        <section id="appointment" class="floating-box">
+            <button id="toggle-appointment">Request an Appointment</button>
+            <div id="appointment-form-container" class="hidden">
+                <h3 id="appointment-heading">Ann-Marie Murphy, LMFT Counseling</h3>
+                <form class="appointment-form" action="mailto:therapistamm@gmail.com" method="post" enctype="text/plain">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" required>
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                    <label for="phone">Phone Number (optional):</label>
+                    <input type="tel" id="phone" name="phone">
+                    <label for="message">Message:</label>
+                    <textarea id="message" name="message" rows="4" required></textarea>
+                    <button type="submit">Send</button>
+                </form>
+            </div>
+        </section>
         <section id="ann-marie">
             <img src="imgs/ann-marie1.jpeg" alt="Ann-Marie" class="about-image">
             <blockquote class="quote">
@@ -88,23 +107,6 @@
             </ul>
         </section>
 
-        <section id="appointment" class="floating-box">
-            <button id="toggle-appointment">Request an Appointment</button>
-            <div id="appointment-form-container" class="hidden">
-                <h3 id="appointment-heading">Ann-Marie Murphy, LMFT Counseling</h3>
-                <form class="appointment-form" action="mailto:therapistamm@gmail.com" method="post" enctype="text/plain">
-                    <label for="name">Name:</label>
-                    <input type="text" id="name" name="name" required>
-                    <label for="email">Email:</label>
-                    <input type="email" id="email" name="email" required>
-                    <label for="phone">Phone Number (optional):</label>
-                    <input type="tel" id="phone" name="phone">
-                    <label for="message">Message:</label>
-                    <textarea id="message" name="message" rows="4" required></textarea>
-                    <button type="submit">Send</button>
-                </form>
-            </div>
-        </section>
     </main>
 
     <footer>
