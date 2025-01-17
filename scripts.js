@@ -5,7 +5,7 @@ document.addEventListener('DOMContentLoaded', function() {
     toggleButton.addEventListener('click', function() {
         formContainer.classList.toggle('hidden');
         if (formContainer.classList.contains('hidden')) {
-            toggleButton.textContent = 'Request an Appointment';
+            toggleButton.textContent = '15 minute consultation';
         } else {
             toggleButton.textContent = 'Close';
         }
