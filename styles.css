@@ -1,6 +1,3 @@
-/* VERSION 4 General Styles */
-
-
 :root {
     --primary-color: #9370DB;
     --secondary-color: rgba(171, 4, 180, 0.3);
@@ -284,86 +281,139 @@ footer {
     color: white;
 }
 
-/* Responsive styles */
-/* General mobile adjustments */
+/* Base adjustments for devices 768px or smaller */
 @media (max-width: 768px) {
     body {
-        font-size: 16px; /* Adjust base font size for readability */
+        font-size: 90%; /* Scale down overall text slightly */
+        padding: 10px;
     }
 
     header, footer {
-        padding: var(--spacing-small) 0;
+        padding: 10px;
         text-align: center;
     }
 
-    header h1 {
-        font-size: 1.5em;
-    }
-
-    nav ul li {
-        display: block; /* Stack navigation links */
-        margin: var(--spacing-small) 0;
+    nav ul {
+        padding: 0;
+        display: flex;
+        flex-direction: column; /* Stack navigation links */
+        gap: 10px;
     }
 
     #main-container {
         flex-direction: column; /* Stack sections vertically */
-        gap: var(--spacing-small);
     }
 
     #ann-marie {
         flex-direction: column;
-        max-width: 100%; /* Use full width */
-    }
-
-    #about-container {
-        margin-left: var(--spacing-small);
-        margin-right: var(--spacing-small);
-    }
-
-    #about,
-    #services,
-    #contact {
-        padding: var(--spacing-small);
-        margin: var(--spacing-small) 0;
+        align-items: center;
+        max-width: 100%;
+        padding: 20px 10px;
     }
 
     .about-image,
     .service-image {
-        max-width: 80%; /* Shrink images to fit */
+        width: 100%;
+        max-width: 250px; /* Limit size of images */
+    }
+
+    #about-container {
+        padding: 10px;
+        margin: 0;
+    }
+
+    section {
+        padding: 15px;
+        margin: 10px 0;
+    }
+
+    .service {
+        border-width: 5px; /* Thinner borders for smaller screens */
+        margin: 10px 0;
     }
 
     #appointment.floating-box {
-        width: 90%; /* Reduce width for smaller screens */
-        right: var(--spacing-small);
-        top: var(--spacing-small);
-    }
-
-    .appointment-form input,
-    .appointment-form textarea {
-        font-size: 14px; /* Adjust input font size */
-    }
-
-    .appointment-form button {
-        font-size: 14px; /* Adjust button font size */
+        position: static;
+        width: auto;
+        margin: 10px auto;
+        box-shadow: none;
     }
 
     #toggle-appointment {
         font-size: 14px;
+        width: 100%;
+    }
+
+    .appointment-form input,
+    .appointment-form textarea {
+        font-size: 14px;
+    }
+
+    .appointment-form button {
+        font-size: 14px;
     }
 }
 
-/* Very small devices (e.g., phones) */
+
 @media (max-width: 480px) {
-    h2, h3, h4 {
-        font-size: 1.2em; /* Adjust heading sizes */
+    body {
+        font-size: 85%; /* Slightly smaller text for very small screens */
+    }
+
+    h1, h2, h3 {
+        font-size: 1.2em; /* Shrink headings */
+    }
+
+    nav ul li {
+        margin: 5px 0;
     }
 
     .quote {
         font-size: 1em; /* Shrink quote text */
+        padding: 10px;
     }
 
     .service {
-        border-width: 0.5em; /* Reduce border thickness */
+        margin: 5px 0;
+        padding: 10px;
+    }
+
+    .service-description {
+        padding: 10px;
+    }
+
+    footer {
+        padding: 10px;
+        font-size: 0.9em; /* Smaller footer text */
+    }
+
+    #appointment.floating-box {
+        padding: 10px;
+        width: 100%;
+    }
+
+    .appointment-form {
+        padding: 10px;
+    }
+
+    #toggle-appointment {
+        font-size: 12px;
+    }
+    .verified-image {
+        width: 100%;
+        border-radius: 15px;
+    }
+    #locations {
+        padding: 20px;
+        font-size: 0.9em;
+        text-align: center;
+        text-transform: uppercase;
+        top: calc(var(--spacing-medium));
+    }
+    #credentials{
+        padding-top: 20px;
+        font-size: 0.9em;
+        text-align: center;
+        top: calc(var(--spacing-medium));
     }
 }
-
