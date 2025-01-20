@@ -1,6 +1,8 @@
 :root {
-    --primary-color: #9370DB;
-    --secondary-color: rgba(171, 4, 180, 0.3);
+    --primary-color: rgba(73, 175, 73, 0.9);
+    --secondary-color: rgba(111, 119, 241, 0.3);
+    --tertiary-color: rgba(42, 8, 236, 0.9);
+    --switch-color: #047711;
     --text-color: #333;
     --background-light: rgba(255, 255, 255, 0.9);
     --shadow-color: rgba(0, 0, 0, 0.1);
@@ -29,12 +31,6 @@ header, footer {
 }
 
 header h1 {
-    margin: 0;
-    font-family: var(--font-secondary);
-    font-style: italic;
-}
-
-#locations {
     margin: 0;
     font-family: var(--font-secondary);
     font-style: italic;
@@ -86,13 +82,15 @@ section {
 } */
 
 h2 {
-    color: var(--primary-color);
+    /* color: var(--primary-color); */
+    font-family: var(--font-secondary);
+    font-style: italic;
     margin-top: 0;
 }
 
 h3 {
     color: rgba(11, 0, 0, 1);
-    font-family: var(--font-secondary);
+    font-family: var(--font-primary);
 }
 
 h4 {
@@ -118,7 +116,10 @@ a:hover {
     border-radius: var(--border-radius);
     z-index: 1000;
     overflow-y: auto;
-    max-height: 90vh;
+    /* max-height: 90vh; */
+    margin: 0;
+    font-family: var(--font-secondary);
+    font-style: italic;
 }
 
 .verification {
@@ -142,20 +143,51 @@ a:hover {
 }
 
 #ann-marie {
+    max-width: 800px;
+    margin: 0 auto var(--spacing-medium) auto;
+    text-align: left;
+    padding: var(--spacing-medium);
+    border-radius: var(--border-radius);
+    /* font-weight: bold; */
+}
+
+#about {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#about h2 {
+    text-align: center;
+    width: 100%;
+}
+
+.about-content {
     display: flex;
     flex-direction: row;
-    align-items: center;
-    justify-content: center;
+    align-items: flex-start;
     gap: var(--spacing-medium);
+    width: 100%;
+    flex-wrap: wrap;
+}
+
+.about-image-container {
     flex: 1;
-    max-width: 50%;
+    display: flex;
+    justify-content: center;
 }
 
 .about-image {
+    /* transform: scale(1.5); */
     width: 100%;
-    max-width: auto;
+    max-width: 300px;
     border-radius: 50%;
     border: var(--thin-border);
+}
+
+.about-text {
+    flex: 2;
+    text-align: left;
 }
 
 .quote {
@@ -172,14 +204,15 @@ a:hover {
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 100%;
+    /* width: 100%; */
     margin-bottom: var(--spacing-medium);
     margin-left: 200px;
     margin-right: 200px;
 
 }
 
-#about,
+/* #ann-marie, */
+#bulletin,
 #services,
 #contact {
     max-width: 800px;
@@ -190,9 +223,13 @@ a:hover {
     font-weight: bold;
 }
 
+#bulletin h2 {
+    color: red;
+}
+
 .service {
     margin-bottom: var(--spacing-medium);
-    border: 1em solid #e2c6f7;
+    border: 1em solid var(--secondary-color);
     border-radius: var(--border-radius);
 }
 
@@ -236,7 +273,7 @@ a:hover {
 }
 
 #toggle-appointment:hover {
-    background-color: #7B68EE;
+    background-color: var(--switch-color);
 }
 
 .hidden {
@@ -274,7 +311,7 @@ a:hover {
 }
 
 .appointment-form button:hover {
-    background-color: #7B68EE;
+    background-color: var(--switch-color);
 }
 
 footer {
@@ -282,6 +319,10 @@ footer {
     padding: var(--spacing-medium) 0;
     background-color: var(--secondary-color);
     color: white;
+}
+
+#email {
+    color: var(--tertiary-color);
 }
 
 /* Base adjustments for devices 768px or smaller */
@@ -360,6 +401,8 @@ footer {
 
 @media (max-width: 480px) {
     body {
+        /* background: none; */
+        /* background-color: #f8f8f8; Off-white background color for mobile devices */
         font-size: 85%; /* Slightly smaller text for very small screens */
     }
 
@@ -402,13 +445,19 @@ footer {
         width: 100%;
         border-radius: 15px;
     }
+
     #locations {
-        padding: 20px;
+        position: relative;
+        top: var(--spacing-medium);
+        color: white;
+        border-radius: var(--border-radius);
+        margin: 0;
+        font-family: var(--font-secondary);
+        font-style: italic;
         font-size: 1.3em; 
         text-align: center;
-        text-transform: uppercase;
-        top: calc(var(--spacing-medium) + 10px);
     } 
+
     #credentials{
         padding-top: 20px;
         font-size: 1.1em;
@@ -418,5 +467,10 @@ footer {
 
     #main-container {
         margin-top: calc(var(--spacing-medium) - 10px);
+    }
+
+    .about-content {
+        flex-direction: column;
+        align-items: center;
     }
 }
