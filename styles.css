@@ -17,8 +17,8 @@
 }
 
 body {
-    /* background: url('imgs/safe-place.jpg') center/cover no-repeat fixed; */
-    background-color: var(--mobile-background);
+    background: url('imgs/safe-place.jpg') center/cover no-repeat fixed; 
+    /* background-color: var(--mobile-background); */
     margin: 0;
     padding: 0;
     font-family: var(--font-primary);
@@ -403,8 +403,8 @@ footer {
 
 @media (max-width: 480px) {
     body {
-        background: none;
-        background-color: var(--mobile-background); 
+        /* background: none; */
+        /* background-color: var(--mobile-background); */
         font-size: 85%; /* Slightly smaller text for very small screens */
     }
 
