@@ -130,7 +130,8 @@ a:hover {
 }
 
 .verified-image {
-    width: 30%;
+    width: 352px;
+    height: auto;
     border-radius: 15px;
 }
 
