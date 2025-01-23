@@ -13,10 +13,12 @@
     --spacing-medium: 20px;
     --spacing-large: 40px;
     --thin-border: 1px solid black;
+    --mobile-background: #e7cef1;
 }
 
 body {
-    background: url('imgs/safe-place.jpg') center/cover no-repeat fixed;
+    /* background: url('imgs/safe-place.jpg') center/cover no-repeat fixed; */
+    background: var(--mobile-background)
     margin: 0;
     padding: 0;
     font-family: var(--font-primary);
@@ -401,8 +403,8 @@ footer {
 
 @media (max-width: 480px) {
     body {
-        /* background: none; */
-        /* background-color: #f8f8f8; Off-white background color for mobile devices */
+        background: none;
+        background-color: var(--mobile-background); 
         font-size: 85%; /* Slightly smaller text for very small screens */
     }
 
