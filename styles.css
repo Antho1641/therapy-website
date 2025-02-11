@@ -1,6 +1,6 @@
 :root {
     --primary-color: rgba(73, 175, 73, 0.9);
-    --secondary-color: rgba(111, 119, 241, 0.3);
+    --secondary-color: rgba(111, 119, 241, 0.9);
     --tertiary-color: rgba(42, 8, 236, 0.9);
     --switch-color: #047711;
     --text-color: #333;
@@ -18,11 +18,13 @@
 
 body {
     background: url('imgs/safe-place.jpg') center/cover no-repeat fixed; 
-    /* background-color: var(--mobile-background); */
     margin: 0;
     padding: 0;
     font-family: var(--font-primary);
     color: var(--text-color);
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
 }
 
 header, footer {
@@ -47,11 +49,13 @@ nav ul {
     padding: 0;
     margin: var(--spacing-medium) 0 0;
     text-align: center;
+    display: flex;
+    justify-content: center;
+    gap: var(--spacing-small);
 }
 
 nav ul li {
     display: inline;
-    margin: 0 var(--spacing-small);
 }
 
 nav ul li a {
@@ -66,6 +70,7 @@ nav ul li a:hover {
 
 main {
     padding: var(--spacing-medium);
+    flex: 1;
 }
 
 section {
@@ -75,16 +80,11 @@ section {
     border-radius: var(--border-radius);
     box-shadow: 0 0 10px var(--shadow-color);
     border: var(--thin-border);
+    display: flex;
+    flex-direction: column;
 }
 
-/* h1 {
-    color: var(--primary-color);
-    margin-top: 0;
-    font-size: 2em;
-} */
-
 h2 {
-    /* color: var(--primary-color); */
     font-family: var(--font-secondary);
     font-style: italic;
     margin-top: 0;
@@ -113,12 +113,10 @@ a:hover {
     top: var(--spacing-medium);
     left: var(--spacing-medium);
     padding: var(--spacing-small);
-    /* background-color: var(--secondary-color); */
     color: white;
     border-radius: var(--border-radius);
     z-index: 1000;
     overflow-y: auto;
-    /* max-height: 90vh; */
     margin: 0;
     font-family: var(--font-secondary);
     font-style: italic;
@@ -151,7 +149,6 @@ a:hover {
     text-align: left;
     padding: var(--spacing-medium);
     border-radius: var(--border-radius);
-    /* font-weight: bold; */
 }
 
 #about {
@@ -181,7 +178,6 @@ a:hover {
 }
 
 .about-image {
-    /* transform: scale(1.5); */
     width: 100%;
     height: auto;
     max-width: 300px;
@@ -208,14 +204,11 @@ a:hover {
     display: flex;
     flex-direction: column;
     align-items: center;
-    /* width: 100%; */
     margin-bottom: var(--spacing-medium);
     margin-left: 200px;
     margin-right: 200px;
-
 }
 
-/* #ann-marie, */
 #bulletin,
 #services,
 #contact {
@@ -235,6 +228,9 @@ a:hover {
     margin-bottom: var(--spacing-medium);
     border: 1em solid var(--secondary-color);
     border-radius: var(--border-radius);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .service-image {
@@ -243,7 +239,6 @@ a:hover {
     height: auto;
     border-radius: 50%;
     margin-top: 10px;
-    /* padding: var(--spacing-medium); */
     border: var(--thin-border);
 }
 
@@ -329,10 +324,17 @@ footer {
     color: var(--tertiary-color);
 }
 
-/* Base adjustments for devices 768px or smaller */
+#quote {
+    font-size: 0.9em;
+    padding: 1px;
+    text-align: center;
+    font-style: italic;
+    font-weight: bold;
+}
+
 @media (max-width: 768px) {
     body {
-        font-size: 90%; /* Scale down overall text slightly */
+        font-size: 90%;
         padding: 10px;
     }
 
@@ -342,14 +344,12 @@ footer {
     }
 
     nav ul {
-        padding: 0;
-        display: flex;
-        flex-direction: column; /* Stack navigation links */
+        flex-direction: column;
         gap: 10px;
     }
 
     #main-container {
-        flex-direction: column; /* Stack sections vertically */
+        flex-direction: column;
     }
 
     #ann-marie {
@@ -363,7 +363,7 @@ footer {
     .service-image {
         width: 100%;
         height: auto;
-        max-width: 250px; /* Limit size of images */
+        max-width: 250px;
     }
 
     #about-container {
@@ -377,7 +377,7 @@ footer {
     }
 
     .service {
-        border-width: 5px; /* Thinner borders for smaller screens */
+        border-width: 5px;
         margin: 10px 0;
     }
 
@@ -403,12 +403,9 @@ footer {
     }
 }
 
-
 @media (max-width: 480px) {
     body {
-        /* background: none; */
-        /* background-color: var(--mobile-background); */
-        font-size: 85%; /* Slightly smaller text for very small screens */
+        font-size: 85%;
     }
 
     nav ul li {
@@ -416,7 +413,7 @@ footer {
     }
 
     .quote {
-        font-size: 1em; /* Shrink quote text */
+        font-size: 1em;
         padding: 10px;
     }
 
@@ -431,7 +428,7 @@ footer {
 
     footer {
         padding: 10px;
-        font-size: 0.9em; /* Smaller footer text */
+        font-size: 0.9em;
     }
 
     #appointment.floating-box {
@@ -446,6 +443,7 @@ footer {
     #toggle-appointment {
         font-size: 12px;
     }
+
     .verified-image {
         width: 100%;
         height: auto;
@@ -464,7 +462,7 @@ footer {
         text-align: center;
     } 
 
-    #credentials{
+    #credentials {
         padding-top: 20px;
         font-size: 1.1em;
         text-align: center;
@@ -483,11 +481,11 @@ footer {
     .service-image {
         width: 100%;
         height: auto;
-        max-width: 250px; /* Limit size of images */
+        max-width: 250px;
     }
 
     .verified-image {
-        width: 100%
+        width: 100%;
         height: auto;
     }
 }
