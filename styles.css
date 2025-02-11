@@ -1,6 +1,6 @@
 :root {
     --primary-color: rgba(73, 175, 73, 0.9);
-    --secondary-color: rgba(111, 119, 241, 0.9);
+    --secondary-color: rgba(111, 119, 241, 0.5);
     --tertiary-color: rgba(42, 8, 236, 0.9);
     --switch-color: #047711;
     --text-color: #333;
